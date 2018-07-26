@@ -8,13 +8,17 @@ elif type lsb_release >/dev/nill 2>&1; then
 fi
 
 if [ OS = "Arch Linux" ]; then
-  sudo pacman -Sy base-devel nodejs yarn npm
+  source ./install/arch_linux.zsh
 elif [ OS = "Ubuntu" ]; then
-  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-  curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+  source ./install/ubuntu.zsh
+fi
 
-  sudo apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev nodejs yarn
+# Install oh my zsh
+env git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git "$ZSH"
+
+if [ -f ~/.zshrc ] || [ -h ~/.zshrc ]; then
+  printf "${YELLOW}Found ~/.zshrc.${NORMAL} ${GREEN}Backing up to ~/.zshrc.pre-oh-my-zsh${NORMAL}\n";
+  mv ~/.zshrc ~/.zshrc.pre-oh-my-zsh;
 fi
 
 # Install rbenv and ruby-build
