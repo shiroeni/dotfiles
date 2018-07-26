@@ -36,4 +36,8 @@ cp ./dotzsh/zshrc ~/.zshrc
 cp -r ./nvim ~/.config/nvim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-echo "gem: --no-ri --no-rdoc" > ~/.gemrc
+cp -r ./etc/tmux/tmux.conf ~/.tmux.conf
+cp -r ./etc/compton/config ~/.config/compton.conf
+cp -r ./etc/bundle/config ~/.bundle
+cp -r ./etc/gemrc ~/.gemrc
+cp -r ./etc/git/global_ignore ~/.gitignore_global
