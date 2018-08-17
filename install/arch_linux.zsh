@@ -19,6 +19,12 @@ INSTALL_PACKAGES=(
     "mc"
     "neovim"
     "git"
+    "openssh"
+    "openssl"
+    "udiskie"
+    "python"
+    "perl"
+    "go"
 )
 
 sudo pacman -Sy $INSTALL_PACKAGES

@@ -14,7 +14,7 @@ elif [ OS = "Ubuntu" ]; then
 fi
 
 # Install oh my zsh
-env git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git "$ZSH"
+git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git "~/.oh-my-zsh"
 
 if [ -f ~/.zshrc ] || [ -h ~/.zshrc ]; then
   printf "${YELLOW}Found ~/.zshrc.${NORMAL} ${GREEN}Backing up to ~/.zshrc.pre-oh-my-zsh${NORMAL}\n";
