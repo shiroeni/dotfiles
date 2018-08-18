@@ -1,5 +1,5 @@
 INSTALL_PACKAGES=(
-    "i3wm"
+    "i3"
     "tmux"
     "tilix"
     "zsh"
@@ -17,6 +17,8 @@ INSTALL_PACKAGES=(
     "mpv"
     "ffmpeg"
     "mc"
+    "neovim"
+    "git"
 )
 
 sudo pacman -Sy $INSTALL_PACKAGES
