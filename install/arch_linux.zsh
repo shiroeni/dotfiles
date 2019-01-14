@@ -25,6 +25,8 @@ INSTALL_PACKAGES=(
     "python"
     "perl"
     "go"
+    "udisk2"
+    "notify-usd"
 )
 
 sudo pacman -Sy $INSTALL_PACKAGES
