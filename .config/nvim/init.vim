@@ -22,16 +22,18 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'uplus/deoplete-solargraph'
 
 " ruby and ror support
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rbenv'
-Plug 'tpope/vim-bundler'
+Plug 'vim-ruby/vim-ruby', { 'for': ['ruby','haml','slim','eruby'] }
+Plug 'tpope/vim-rbenv', { 'for': 'ruby' }
+Plug 'tpope/vim-bundler', { 'for': 'ruby' }
 Plug 'tpope/vim-rails'
-Plug 'tpope/vim-endvise'
-Plug 'thoughtbot/vim-rspec'
+Plug 'tpope/vim-endvise', { 'for': 'ruby' }
+Plug 'tpope/vim-rake', { 'for': 'ruby' }
+Plug 'Keithbsmiley/rspec.vim', { 'for': 'ruby' }
+Plug 'thoughtbot/vim-rspec', { 'for': 'ruby' }
 
 " For front-end
 Plug 'pangloss/vim-javascript'
-Plug 'kchmck/vim-coffee-script', { 'for': ['coffee', 'haml', 'eruby']}
+Plug 'kchmck/vim-coffee-script', { 'for': ['coffee', 'haml', 'eruby'] }
 Plug 'tpope/vim-haml'
 Plug 'ap/vim-css-color'
 Plug 'cakebaker/scss-syntax.vim'
@@ -66,3 +68,13 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " Enable autosave file
 let g:auto_save = 1
+
+" Enable Ruby linters
+let g:neomake_ruby_enabled_makers = ['rubocop', 'reek']
+let g:neomake_highlight_columns = 1
+
+" Rubocop fix current file
+nmap <leader>rc :call RubocopAutoFix()<CR>
+
+call neomake#configure#automake('nwri')
+
