@@ -1,4 +1,6 @@
-require: rubocop-rspec
+require: 
+  - rubocop-performance
+  - rubocop-rspec
 
 # Default RuboCop settings.
 AllCops:
@@ -39,7 +41,7 @@ Metrics/LineLength:
 
 Style/Encoding:
   StyleGuide: '#utf-8'
-  Enabled: when_needed
+  Enabled: true
 
 Style/Documentation:
   Enabled: false
