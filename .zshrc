@@ -12,3 +12,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+alias rake="bundle exec rake"
+alias rails="bundle exec rails"
+alias rack="bundle exec rack"
