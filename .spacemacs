@@ -54,6 +54,10 @@ values."
      elixir
      docker
      go
+     (wakatime
+      :variables
+      wakatime-api-key "xxx"
+      wakatime-cli-path "/usr/local/bin/wakatime")
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -335,6 +339,7 @@ you should place your code here."
   (setq web-mode-code-indent-offset 2) ; web-mode, js code in html file
   (setq css-indent-offset 2) ; css-mode
   (elcord-mode)
+  (global-wakatime-mode)
   )
 
 ;; Custom function
