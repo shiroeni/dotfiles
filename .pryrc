@@ -7,4 +7,4 @@ if defined?(PryByebug)
   Pry.commands.alias_command 'q', 'exit'
 end
 
-Pry.editor = 'vi'
+Pry.editor = 'emacsclient -nw'
