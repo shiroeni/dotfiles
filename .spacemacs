@@ -53,7 +53,10 @@ values."
      clojure
      elixir
      docker
-     go
+     (go
+      :variables
+      go-use-gometalinter t
+      go-tab-width 2)
      (wakatime
       :variables
       wakatime-api-key "xxx"
