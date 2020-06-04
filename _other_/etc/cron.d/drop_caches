@@ -1,0 +1,2 @@
+# drop hyper-v cache to prevent excessive RAM usage on the host system
+0 * * * * echo 3 > /proc/sys/vm/drop_caches
