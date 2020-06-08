@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Cache varaible
+# key: memv
+# --
+@${1:variable_name} ||= ${0:variable_name}

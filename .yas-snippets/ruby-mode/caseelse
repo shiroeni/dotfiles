@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: case-when-else
+# key: caseelse
+# --
+case $1
+when $2
+  $0
+else nil
+end

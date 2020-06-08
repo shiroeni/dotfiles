@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: ActiveRecord callback
+# key: arclb
+# --
+${1:before_save} :${2:method_name}
+
+def :${2:method_name}
+  $0
+end

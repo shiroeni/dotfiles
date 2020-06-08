@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: subject block
+# key: subj
+# --
+subject do
+  described_class.new($0)
+end

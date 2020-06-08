@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: Ruby Class
+# key: classcall
+# --
+# frozen_string_literal: true
+
+class ${1:ClassName}
+  def initialize(${3:args})
+    $0
+  end
+
+  def call
+    $2
+  end
+end

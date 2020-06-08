@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: irb
+# key: irb
+# --
+binding.irb

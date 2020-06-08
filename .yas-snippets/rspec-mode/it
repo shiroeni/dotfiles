@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: it block
+# key: it
+# --
+it '...' do
+  expect($0).to eq(...)
+end

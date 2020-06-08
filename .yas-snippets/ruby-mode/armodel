@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: ActiveRecord model
+# key: armodel
+# --
+# frozen_string_literal: true
+
+class ${1:ModelName} < ${2:ApplicationRecord}
+  $0
+end

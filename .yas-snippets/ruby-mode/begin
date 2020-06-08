@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: Block with rescue
+# key: begin
+# --
+begin
+  raise 'change me'
+rescue Exception => e
+  puts e.message
+end

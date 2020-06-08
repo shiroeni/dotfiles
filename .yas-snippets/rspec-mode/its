@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: short it block
+# key: its
+# --
+it '...' { expect($0).to eq() }
