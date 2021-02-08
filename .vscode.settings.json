@@ -1,0 +1,99 @@
+{
+    "editor.tabSize": 2,
+    "vim.easymotion": true,
+    "vim.useSystemClipboard": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<space>"
+            ],
+            "commands": [
+                "vspacecode.space"
+            ]
+        },
+        {
+            "before": [
+                ","
+            ],
+            "commands": [
+                "vspacecode.space",
+                {
+                    "command": "whichkey.triggerKey",
+                    "args": "m"
+                }
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<space>"
+            ],
+            "commands": [
+                "vspacecode.space"
+            ]
+        },
+        {
+            "before": [
+                ","
+            ],
+            "commands": [
+                "vspacecode.space",
+                {
+                    "command": "whichkey.triggerKey",
+                    "args": "m"
+                }
+            ]
+        }
+    ],
+    "workbench.editor.showTabs": false,
+    "editor.fontFamily": "'Fantasque Sans Mono', 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "One Monokai",
+    "workbench.iconTheme": "vscode-great-icons",
+    "[ruby]": {
+       "editor.defaultFormatter": "misogi.ruby-rubocop"
+    },
+
+    // Disable noisy warnings about old configs
+    "ruby.rubocop.suppressRubocopWarnings": true,
+
+    // Colorizing YARD doc-strings for One Monokai
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "comment.line.keyword.punctuation.yard.ruby",
+                    "comment.line.keyword.yard.ruby"
+                ],
+                "settings": {
+                    "foreground": "#E5C07B"
+                }
+            },
+            {
+                "scope": [
+                    "comment.line.type.yard.ruby"
+                ],
+                "settings": {
+                    "foreground": "#61AFEF"
+                }
+            },
+            {
+                "scope": [
+                    "comment.line.parameter.yard.ruby"
+                ],
+                "settings": {
+                    "foreground": "#ABB2BF"
+                }
+            },
+            {
+                "scope": [
+                    "comment.line.hashkey.yard.ruby"
+                ],
+                "settings": {
+                    "foreground": "#56B6C2"
+                }
+            }
+        ]
+    }
+}
