@@ -1,3 +1,0 @@
-#!/bin/bash
-# Run pg_dump from docker
-exec docker exec -it local-postgres-13 pg_dump --username shiroeni
