@@ -1,0 +1,9 @@
+font:
+  size: 12
+
+window:
+  decoration: none
+
+  padding:
+    x: 10
+    y: 5
