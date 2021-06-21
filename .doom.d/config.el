@@ -17,6 +17,8 @@
       elcord-use-major-mode-as-main-icon t
       )
 
+(require 'ace-window)
+
 ;; make treemacs selectable from ace-window
 (after! treemacs
   (setq aw-ignored-buffers (delq 'treemacs-mode aw-ignored-buffers)))
