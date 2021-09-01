@@ -3,7 +3,7 @@
 (setq user-full-name "Eugene Palchikov"
       user-mail-address "me@aryon.dev"
 
-      doom-font (font-spec :family "Fantasque Sans Mono" :size 18)
+      doom-font (font-spec :family "Fantasque Sans Mono" :size 16)
 
       doom-theme 'doom-gruvbox
       doom-themes-treemacs-theme 'doom-treemacs-colors
@@ -13,7 +13,9 @@
       ;; мимикрируем под нормальных людей
       elcord--editor-name "Emacs"
 
-      elcord--editor-icon "emacs_icon"
+      elcord--editor-icon "emacs_pen_icon"
+
+      elcord--editor-icon "emacs_pen_icon"
       elcord-use-major-mode-as-main-icon t
       )
 
@@ -40,4 +42,15 @@
 
     ))
 
+;; fix annoying company's "do -> downcase" in ruby-mode
+(setq company-minimum-prefix-length 3)
+
 (elcord-mode)
+
+
+;; custom functions...
+(defun yml-sorter ()
+  "Run `yml-sorter' on file from current buffer"
+  (interactive)
+  (shell-command (concat "yml-sorter --input " buffer-file-name))
+  )
