@@ -27,8 +27,16 @@
       lsp-ui-doc-show-with-mouse t)
 
 (map! :leader
-      :desc "robe-jump (Go to definition)"
+      :desc "Go to definition (robe-jump)"
       "m g g" #'robe-jump)
+
+(map! :leader
+      :desc "Go to definition (LSP)"
+      "m g f" #'lsp-find-definition)
+
+(map! :leader
+      :desc "Find references"
+      "m g r" #'lsp-find-references)
 
 ;; fix company "do -> downcase" in ruby-mode
 (setq company-minimum-prefix-length 3)
