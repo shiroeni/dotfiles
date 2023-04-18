@@ -1,5 +1,5 @@
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="spaceship"
+ZSH_THEME="bira"
 
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
@@ -13,13 +13,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-alias rake="bundle exec rake"
-alias rails="bundle exec rails"
-alias rack="bundle exec rack"
-alias karafka="bundle exec karafka"
-alias racecar="bundle exec racecar"
-alias cap="bundle exec cap"
-
-# uncomment for WSL with external X Server
-# export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
-# export LIBGL_ALWAYS_INDIRECT=1
+alias be="bundle exec"
+alias dkc="docker compose"
+alias hx="helix"
