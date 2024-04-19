@@ -1,0 +1,3 @@
+root = ssh://user@host//home/dev/code
+root = /Users/aryon/Code/remote
+perms = 0o0000
