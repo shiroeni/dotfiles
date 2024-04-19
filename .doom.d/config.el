@@ -1,11 +1,11 @@
-;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
+;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
 (setq user-full-name "Eugene Palchikov"
       user-mail-address "me@aryon.dev"
 
       doom-font (font-spec :family "Fantasque Sans Mono" :size 16)
-      doom-theme 'doom-molokai
-      
+      doom-theme 'doom-monokai-classic
+
       org-directory "~/org/"
 
       display-line-numbers-type 'relative
@@ -26,6 +26,10 @@
       lsp-ui-doc-show-with-cursor t
       lsp-ui-doc-show-with-mouse t)
 
+(setq +ligatures-in-modes nil)
+
+(defun risky-local-variable-p (sym &optional _ignored) nil)
+
 (map! :leader
       :desc "Go to definition (robe-jump)"
       "m g g" #'robe-jump)
@@ -40,8 +44,13 @@
 
 ;; fix company "do -> downcase" in ruby-mode
 (setq company-minimum-prefix-length 3)
+;; complete with <tab>
+;(with-eval-after-load 'company
+;  (define-key company-mode-map (kbd "<tab>") 'company-complete))
 
+;; fancy blame line like in code lens in vscode
 (use-package blamer
+  :bind (("s-i" . blamer-show-commit-info))
   :defer 20
   :custom
   (blamer-idle-time 0.3)
@@ -54,9 +63,12 @@
   :config
   (global-blamer-mode 1))
 
+(require 'mmm-auto)
+(setq mmm-global-mode 'maybe)
+
 ;; custom functions...
 (defun yml-sorter ()
-  "Run 'yml-sorter' on file from current buffer"
+  "Run \"yml-sorter\" on file from current buffer"
   (interactive)
   (shell-command (concat "yml-sorter --input " buffer-file-name))
   )

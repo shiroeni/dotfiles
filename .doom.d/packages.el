@@ -14,3 +14,6 @@
 
 (package! ement
   :recipe (:host github :repo "alphapapa/ement.el"))
+
+(package! mmm-mode
+  :recipe (:host github :repo "dgutov/mmm-mode"))
